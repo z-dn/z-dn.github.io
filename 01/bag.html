@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+ </head>
+ <body onload="rect()">
+  <canvas id="mycanvas" width="1000px" height="1000px"></canvas>
+  <script>
+   function rect()
+   {
+	   var elem=document.getElementById("mycanvas");
+	   var context=elem.getContext("2d");
+	   context.strokeStyle="blue";
+	   context.lineWidth=4;
+	   context.strokeRect(300,250,100,300);
+   }
+  </script>
+ </body>
+</html>
