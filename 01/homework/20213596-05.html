@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>202139605</title>
+  <style>
+   body{background-color:grey;}
+   input{color:blue;
+         background-color:red;
+		 border:green solid 3px;
+		 width:40px;
+		 height:30px;
+		 margin-left:600px;
+		 margin-top:300px;
+		 }
+  </style>
+ </head>
+ <body>
+  <input id="one" type="button" value="点击">
+  <input id="two" type="button" value="返回">
+  <script>
+   var a=document.getElementById("one");
+   a.onclick=function(){
+	   document.write("<div><h1>宿业师山房待丁大不至</h1><h2>孟浩然</h2>夕阳度西岭，群壑倏已暝。<br>松月生夜凉，风泉满清听。<br>樵人归欲尽，烟鸟栖初定。<br>之子期宿来，孤琴候萝径。<br></div><a href='2021359605.html'>返回</a>");
+	   document.querySelector("div").style.backgroundColor="rgb(250,200,200)";
+	   document.querySelector("div").style.color="white";
+       document.querySelector("div").style.textAlign="center";
+       document.querySelector("div").style.fontSize="40px";
+       document.querySelector("div").style.fontFamily="楷体";
+       document.querySelector("h1").style.color="red";
+       document.querySelector("a").style.color="blue";
+       document.querySelector("a").style.fontSize="30px";
+	   }
+   var b=document.getElementById("two");
+   b.onclick=window.location.back();
+  </script>
+ </body>
+</html>
