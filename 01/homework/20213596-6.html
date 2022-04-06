@@ -53,18 +53,20 @@
    p5.textContent=ts[0];
    prevbt.onclick=function() {
        if(i>=0&&i<=3){
+       i--;
 	   h1.textContent=tit[i];
 	   p5.textContent=ts[i];
-	   i--;}
-	   else{h1.textContent=tit[0];
-	        p5.textContent=ts[0];
-		    i=0;}};
+	   }
+	   if(i==-1){h1.textContent=tit[3];
+	        p5.textContent=ts[3];
+		    i=3;}};
    nextbt.onclick=function() {
        if(i>=0&&i<=3){
+       i++;
 	   h1.textContent=tit[i];
 	   p5.textContent=ts[i];
-	   i++;}
-	   else{h1.textContent=tit[0];
+	   }
+	   if(i==4){h1.textContent=tit[0];
 	        p5.textContent=ts[0];
 		    i=0;}}
   </script>
