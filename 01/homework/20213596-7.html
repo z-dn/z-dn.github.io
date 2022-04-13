@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>作业7</title>
+  <style>
+  body{text-align:center;
+       background-color:rgb(224,255,255);
+	   color:rgb(205,133,0);
+       }
+  input{width:100px;
+        height:60px;
+        border-radius:10px/10px;
+		border:0px;
+		font-size:25px;
+		background-color:dodgerblue;
+		color:white;
+		}
+  h1{font-size:50px;
+     font-family:楷体;}
+  p{font-size:30px;
+    width:360px;
+	font-family:楷体;
+	margin:auto;}
+  </style>
+  <script>
+ var ts=[];
+   var tit=[]
+   tit[0]="杜甫：梦李白二首之二";
+   ts[0]="浮云终日行，游子久不至。三夜频梦君，情亲见君意。 告归常局促，苦道来不易。江湖多风波，舟楫恐失坠。出门搔白首，若负平生志。冠盖满京华，斯人独憔悴。孰云网恢恢，将老身反累。千秋万岁名，寂寞身后事。";
+   tit[1]="王维：送别";
+   ts[1]="下马饮君酒，问君何所之。君言不得意，归卧南山陲。但去莫复闻，白云无尽时。";
+   tit[2]="王维：送綦毋潜落第还乡";
+   ts[2]="圣代无隐者，英灵尽来归。遂令东山客，不得顾采薇。既至金门远，孰云吾道非？江淮度寒食，京洛缝春衣。置酒长安道，同心与我违。行当浮桂棹，未几拂荆扉。远树带行客，孤城当落晖。吾谋适不用，勿谓知音稀。";
+   tit[3]="李白：行路难三首之二";
+   ts[3]="大道如青天，我独不得出。羞逐长安社中儿，赤鸡白狗赌梨栗。弹剑作歌奏苦声，曳裾王门不称情。淮阴市井笑韩信，汉朝公卿忌贾生。君不见，昔时燕家重郭隗，拥彗折节无嫌猜剧辛乐毅感恩分，输肝剖胆效英才。昭王白骨萦蔓草，谁人更扫黄金台？行路难，归去来！"
+   tit[4]="邱为：寻西山隐者不遇";
+   ts[4]="绝顶一茅茨，直上三十里。扣关无僮仆，窥室惟案几。若非巾柴车，应是钓秋水。差池不相见，黾勉空仰止。草色新雨中，松声晚窗里。及兹契幽绝，自足荡心耳。虽无宾主意，颇得清净理。兴尽方下山，何必待之子。"
+  </script>
+  </head>
+ <body>
+ <input type="button" value="上一页" id="prev">
+  <input type="button" value="下一页" id="next">
+  <h1></h1>
+  <p id="p5"></p>
+  <p id="p7"></p>
+  <script>
+   var h1=document.querySelector("h1");
+   var p5=document.querySelector("p#p5");
+   var p7=document.querySelector("p#p7");
+   var prevbt=document.querySelector("input#prev");
+   var nextbt=document.querySelector("input#next");
+   var i=0;
+   h1.textContent=tit[0];
+   p5.textContent=ts[0];
+   prevbt.onclick=function() {
+          i--;
+	      if(i>=0&&i<=ts.length){
+			  h1.textContent=tit[i];
+		      p5.textContent=ts[i];}
+		  if(i==-1){ i=4;
+			    h1.textContent=tit[i];
+		        p5.textContent=ts[i];}};
+   nextbt.onclick=function() {
+          i++;
+	      if(i>=0&&i<=ts.length){
+			  h1.textContent=tit[i];
+		      p5.textContent=ts[i];}
+		  if(i==ts.length+1){ i=0;
+			    h1.textContent=tit[i];
+		        p5.textContent=ts[i];
+				}}
+  </script>
+ </body>
+</html>
+
