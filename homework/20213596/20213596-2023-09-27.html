@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <style>
+        .container {
+            width: 895.6px;
+            margin-left: 20%;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(225, 228, 232);
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+
+
+        .code {
+            background-color: #f6f8fa;
+            padding: 5%;
+
+        }
+        .tip {
+
+            border-left:0.25em solid #d0d7de
+        }
+
+        .h1,
+        .h2,
+        h3,
+        .h4,
+        h5,
+        h6 {
+            margin-bottom: 16px;
+            font-weight: 600;
+            line-height: 1.25;
+            border-bottom: 1px solid #d7dde3;
+        }
+
+        .p,
+        .tip,
+        .ul {
+            line-height: 2;
+            color: #24292f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="h1">Linux学习阶段总结</h1>
+        <h2 class="h2">Linux的指令形式</h2>
+        <p class="p">
+            Linux的指令一般都是以如下形式组成：
+        </p>
+        <p class="code">
+            command [-option1] [-option2] [argument1] [argument2] ...
+        </p>
+        <p class="p">
+            其中，command表示要执行的命令名称，可以是系统自带的命令、第三方命令或者用户自定义的脚本等；</br>
+            -option表示命令选项，可以用来更改命令的行为或指定一些参数设置；</br>
+            argument表示命令操作的对象或者需要处理的数据，例如文件名、目录名、文本内容等。</br>
+        </p>
+        <h2 class="h2">cut</h2>
+        <p class="p">
+            cut 命令将输入内容的每一行剪切字节、字符和字段，并将这些字节、字符和字段显示到标准输出，其中，输入内容可以从标准输入或文件中获取。</br>
+
+        </p>
+
+        <h3 class="h3">选项类型</h3>
+        <ul class="ul">
+            <li>
+                -b ：以字节为单位进行分割；
+            </li>
+            <li>
+                -c : 以字符为单位进行分割；
+            </li>
+            <li>
+                -d 分隔符 : 使用指定分隔符代替制表符作为划分符，默认使用制表符；
+            </li>
+            <li>
+                -f ：选择指定的段，如果选择多个段使用 “,” 分隔；
+            </li>
+        </ul>
+        <h2 class="h2">grep</h2>
+        <p class="p">
+            grep是一个常用的命令行工具，用于在文本文件中搜索匹配指定模式的行。它支持正则表达式，使得搜索更加灵活和强大。
+            以下是其语法格式：
+        </p>
+        <p class="code">
+            grep [选项] 模式 [文件...]
+        </p>
+        <p class="p">
+            该命令可以接受多个参数
+        </p>
+        <h3 class="h3">选项类型</h3>
+        <ul class="ul">
+            <li>
+                -i：忽略大小写。
+            </li>
+
+            <li>
+                -r：递归搜索指定目录下的所有文件。
+            </li>
+            <li>
+                -n：显示匹配行的行号。
+            </li>
+            <li>
+                -c：计算匹配行的数量。
+            </li>
+            <li>
+                -l：只显示包含匹配行的文件名，而不显示具体匹配内容。
+            </li>
+            <li>
+                -v：显示不匹配指定模式的行。
+            </li>
+            <li>
+                -e：指定多个模式进行匹配。
+            </li>
+            <li>
+                -f：从文件中读取模式进行匹配。
+            </li>
+
+        </ul>
+    <h2 class="h2">wc</h2>
+    <p class="p">wc命令在Linux中用于计算文件的行数、字数和字节数，或者显示在标准输入中的行数和字数。</p>
+    <h3 class="h3">
+        选项类型
+    </h3>
+    <ul class="ul">
+        <li>-l：只显示行数。</li>
+        <li>-w：只显示字数。</li>
+        <li>-c：只显示字节数。</li>
+        <li>-m：只显示字符数。</li>
+        <li>-L：显示文件中最长行的长度。</li>
+    </ul>
+    <p class="tip">
+        当wc命令不带选项时，输出的三个结果从左到右分别表示行数、字数和字节数。</br>
+        wc命令在计算字数时，将每个空格、制表符和换行符都视为一个字符
+    </p>
+    <h2 class="h2"></h2>
+    <p class="p"></p>
+    </div>
+</body>
+
+</html>

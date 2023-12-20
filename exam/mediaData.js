@@ -1,8 +1,8 @@
 var mediaData = {
     authorPath:"images/",
-    authorspicUrl:["李建宏老师.jpg","zwy.jpg","zcw.png","xjw.jpg","zdn.jpg","zlf.jpg","glj.jpg"],
-    authorsnames:["李建宏老师","zwy","zcw","xjw","zdn","zlf","glj"],
-    authorsUrl:[" " , "https://zhong-wenyu.github.io/" , "https://zhang-xian-sheng1.github.io", "https://xujiangwe.github.io", "https://z-dn.github.io", "https://zenglingfengzeta.github.io", "https://Guo-lijing.github.io" ],
+    authorspicUrl:["李建宏老师.jpg","zdn.jpg","zcw.png","xjw.jpg","zwy.jpg","zlf.jpg","glj.jpg"],
+    authorsnames:["李建宏老师","zdn","zcw","xjw","zwy","zlf","glj"],
+    authorsUrl:[" " , "https://z-dn.github.io/" , "https://zhang-xian-sheng1.github.io", "https://xujiangwe.github.io", "https://zhong-wenyu.github.io/", "https://zenglingfengzeta.github.io", "https://Guo-lijing.github.io" ],
     audioPath : "https://jxzy-dmxy.jxstnu.edu.cn/",
     audioFiles : [
         {fileName:["linuxCMD-6.mp3"],

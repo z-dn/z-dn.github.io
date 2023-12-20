@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Linux命令初步学习的实验报告</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            width: 895.6px;
+            margin-left: 20%;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(225, 228, 232);
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+
+
+        .tip {
+            background-color: #f6f8fa;
+
+        }
+
+        .h1,
+        .h2,
+        h3,
+        .h4,
+        h5,
+        h6 {
+            margin-bottom: 16px;
+            font-weight: 600;
+            line-height: 1.25;
+            border-bottom: 1px solid #d7dde3;
+        }
+
+        .p,
+        .tip {
+            line-height: 2;
+            color: #24292f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="h1">Linux命令初步学习</h1>
+        <h2 class="h2">简介</h2>
+        <p class="p">
+            1.阅读《The Linux Command Line A Complete Introduction》的简介和第一章<br />
+            2.将一个指定的包文件进行解压到指定的文件中<br />
+            3.解压包文件<br />
+            4.删除包文件<br />
+            5.用浏览器播放视频<br />
+        </p>
+        <h2 class="h2">命令</h2>
+        <p class="p">
+            实现将一个包文件解压、查看、删除为以下操作：<br />
+            1. cd workdirectory 进入到个人文件夹（workdirectory代指泛称，并非实际的目录名）<br />
+            2. tar -xf videoClips 解压包文件（包文件的文件名是videoClips）<br />
+            3. ls vdieoMP4 查看解压后的文件内容（vdieoMP4为解压后的文件名）<br />
+            4. rm videoClips<br />
+
+        </p>
+        <p class="tip">
+            注意：<br />
+            在删除videoClips包文件时会有提示（“rm: remove write-protected regular file
+            'videoClips'?”）是否要删除一个受写保护规则的文件，按下键盘的“y”选择确认删除</p>
+        <h2 class="h2">总结</h2>
+        <p class="p">
+            通过阅读《The Linux Command Line A Complete Introduction》的简介和第一章了解到以下内容：<br />
+            1.命令行虽然使用相对困难，但可以完成许多图形化操作无法完成的事情。<br />
+            2.在命令终端输入的命令行与操作系统实现交互是将命令行与程序外壳（shell）进行交互再由外壳程序与操作系统底层进行交互，从而实现对操作系统的各种操作。<br />
+            3.学习到简单、基本的命令行。
+        </p>
+    </div>
+</body>
+
+</html>
