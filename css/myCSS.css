@@ -1,0 +1,43 @@
+*{margin:0}
+body{background-color: rgb(255,255,255)}
+img{
+ max-width: 100%;
+}
+header{
+ height:60px ;
+ background: rgb(250,100,0);
+ color: rgb(250,250,0);
+}
+main{
+
+}
+footer{
+ height:30px ;
+ background: rgb(100,50,50);
+ color: white;
+}
+main{
+ position:relative;
+}
+ div#logoFace{
+ width:50%; 
+ position:absolute;
+ top:5px;
+ right:10px;
+}
+img#teacherFace{
+  width:60%; 
+  border:1px solid red ;
+ }
+
+p#lessonName{
+  font-size: 1.5em;
+  letter-spacing: 0.2em;
+  text-align:center;
+  line-height:60px;
+}
+p#footerInfo{
+  font-size: 0.8em;
+  text-align:center;
+  line-height:30px;
+}
