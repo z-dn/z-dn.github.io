@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width , initial-scale=1">
+  <style>
+   *{
+    margin: 10px;
+    text-align: center;
+   }
+    header{
+      border: 2px solid blue;
+      height: 15%;
+      font-size: 1.66em;
+      
+    }
+    main{
+      border: 2px solid blue;
+      height: 70%;
+      font-size: 1.2em;
+      background-image: url(../lesson/CS.jpg);
+      background-size: cover;
+    }
+    nav{
+      border: 2px solid blue;
+      height: 10%;
+      font-size: 1.1em;
+    }
+    footer{
+      border: 2px solid blue;
+      height: 5%;
+    }
+  </style>
+  <title> "读好书、练思维、爱编程" </title>
+ </head> 
+ <body>
+  <header>
+	  <p id="book">
+      现代电影赏析
+    </p> 
+  </header>
+  <nav>
+    <button>导航一</button>
+    <button>导航二</button>
+    <button>导航三</button>
+  </nav>
+  <main id = 'main'>
+    软件内容区域
+  </main> 
+
+  <footer> 
+   <p id="statusInfo">
+    郭理靖 江西科技师范大学 2025
+	 </p>
+  </footer> 
+
+ <script> 
+    var UI = {};
+    UI.appWidth = window.innerWidth;
+    UI.appHeight = window.innerHeight;
+    let baseFont = UI.appWidth / 20;
+    //通过更改body对象的字体大小，这个属性能够遗传其子子孙孙
+    document.body.style.fontSize = baseFont + "px"; 
+    //通过把body对象的高度设置为设备/屏幕的高度，实现纵向全屏。
+    //通过CSS对子对象百分比（纵向）的配合，从而实现响应式设计的目标。
+    document.body.style.height = UI.appHeight - 70 + "px";
+ </script>
+ </body>
+</html>

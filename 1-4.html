@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width , initial-scale=1">
+  <style>
+   *{
+    margin: 10px;
+    text-align: center;
+   }
+   body{
+    position: relative;
+   }
+    header{
+      border: 2px solid blue;
+      height: 15%;
+      font-size: 1.66em;
+      
+    }
+    main{
+      border: 2px solid blue;
+      height: 70%;
+      font-size: 1.2em;
+      background-image: url(../lesson/CS.jpg);
+      background-size: cover;
+    }
+    nav{
+      border: 2px solid blue;
+      height: 10%;
+      font-size: 1.1em;
+    }
+    footer{
+      border: 2px solid blue;
+      height: 5%;
+    }
+    #aid{
+        position: absolute;
+        border: 1px solid blue;
+        top: 0;
+        left: 600px;
+    }
+    #bookface{
+        position: absolute;
+        width:  80%;
+        height: 70%;
+        border: 1px solid red;
+        background-color: sandybrown;
+        left: 10%;
+    }
+  </style>
+  <title> "读好书、练思维、爱编程" </title>
+ </head> 
+ <body>
+  <header>
+	  <p id="book">
+      现代电影赏析
+    </p> 
+  </header>
+  <nav>
+    <button>导航一</button>
+    <button>导航二</button>
+    <button>导航三</button>
+  </nav>
+  <main id = 'main'>
+    软件内容区域
+    <div id="bookface">书的封面</div>
+  </main> 
+
+  <footer> 
+    <p id="statusInfo">
+        郭理靖 江西科技师范大学 2025
+	</p>
+  </footer> 
+<div id="aid">
+    <p>键盘响应区</p>
+</div>
+ <script> 
+    var UI = {};
+    if(window.innerWidth > 600){
+        UI.appWidth = 600;
+    } else
+    {
+        UI.appWidth = window.innerWidth;
+    }
+    
+    UI.appHeight = window.innerHeight;
+    let baseFont = UI.appWidth / 20;
+    //通过更改body对象的字体大小，这个属性能够遗传其子子孙孙
+    document.body.style.fontSize = baseFont + "px"; 
+    //通过把body对象的高度设置为设备/屏幕的高度，实现纵向全屏。
+    //通过CSS对子对象百分比（纵向）的配合，从而实现响应式设计的目标。
+    document.body.style.height = UI.appHeight - 70 + "px";
+    document.body.style.width = UI.appWidth + "px";
+    if(window.innerWidth < 1000 ){
+        $("aid").style.display = "none";
+    }
+    $("aid").style.width = window.innerWidth - UI.appWidth - 30 + "px";
+    $("aid").style.height =UI.appHeight - 62 + "px";
+    //尝试对鼠标设计UI设计
+    var mouse = {};
+    mouse.isDown = false;
+    mouse.x = 0;
+    mouse.y = 0;
+    mouse.deltaX = 0;
+    $("bookface").addEventListener("mousedown",function(e){
+        mouse.isDown = true;
+        mouse.x = e.pageX;
+        mouse.y = e.pageY;
+        $("bookface").textContent = "鼠标按下，坐标为：(" + mouse.x + "," + mouse.y + ")"
+    })
+    $("bookface").addEventListener("mouseup",function(e){
+        mouse.isDown = false;
+        $("bookface").textContent = "鼠标弹起"
+        if(mouse.deltaX > 50){
+            $("bookface").textContent += ",拖动有效"
+        }
+        $("bookface").style.left = '7%' ;
+        mouse.deltaX = 0;
+        mouse.x = 0;
+        mouse.y = 0;
+        
+    })
+    
+    $("bookface").addEventListener("mousemove",function(e){
+        e.preventDefault();
+        if(mouse.isDown){
+            let x = e.pageX;
+            let y = e.pageY;
+            mouse.deltaX = x - mouse.x;
+            console.log("鼠标移动距离为：" + mouse.deltaX);
+            $("bookface").textContent = "鼠标拖动，坐标为：(" + x + "," + y + ")";
+            $('bookface').style.left = mouse.deltaX + 'px' ;
+        }
+    })
+    $("bookface").addEventListener("mouseout",function(e){
+        e.preventDefault();
+          mouse.isDown=false;
+        // mouse.x= 0 ;
+          //mouse.y= 0 ;
+          $("bookface").textContent= "鼠标松开!";
+          if(Math.abs(mouse.deltaX) > 100){
+              $("bookface").textContent += " 这次是有效拖动！"  ;
+          }else{
+            $("bookface").textContent += " 本次算无效拖动！"  ;
+          $("bookface").style.left = '7%' ;
+        }
+
+      })
+    
+    function $(ele){
+        if (typeof ele !== 'string'){
+           throw("自定义的$函数参数的数据类型错误，实参必须是字符串！");
+           return 
+        } 
+        let dom = document.getElementById(ele) ;
+          if(dom){
+            return dom ;
+          }else{
+            dom = document.querySelector(ele) ;
+            if (dom) {
+                return dom ;
+            }else{
+                throw("执行$函数未能在页面上获取任何元素，请自查问题！");
+                return ;
+            }
+          }
+       }
+ </script>
+ </body>
+</html>
