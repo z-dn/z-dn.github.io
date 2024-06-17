@@ -1,7 +1,7 @@
 Plan.responsiveUI() ;
 httpLoader.request("myData.json") ;
 setTimeout(function(){
- //  按httpLoader模型的设计，textContent存放了获取的文本的字符串
+ //  按httpLoader模型的设计，textContent存放了获取的文本的字符串.
    if(httpLoader._textContent.length > 1 ){
        loadData() ;
      }else{
